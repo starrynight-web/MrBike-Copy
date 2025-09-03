@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamaha R15 V4 - Mr Bike</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bike.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation & hamburger -->
+    <nav>
+        <div class="left-section">
+            <div class="hamburger" onclick="toggleSidebar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo/cropped-image.png" alt="Logo"/>
+                </a>
+            </div>
+        </div>
+
+        <div class="right-section">
+          <div class="search-container">
+            <div class="search-input-wrapper">
+              <i class="fas fa-search search-icon"></i>
+              <input type="text" class="search-bar" placeholder="Search bikes, brands..." id="searchInput" />
+            </div>
+            <div class="search-suggestions" id="searchSuggestions">
+              <div class="search-categories">
+                <span class="category-tag active" data-category="all">All</span>
+                <span class="category-tag" data-category="bikes">Bikes</span>
+                <span class="category-tag" data-category="brands">Brands</span>
+              </div>
+              <div id="suggestionsList">
+                <!-- Suggestions will be populated here -->
+              </div>
+            </div>
+          </div>
+          <div class="notification">
+            <a href="news.html" style="display: inline-block;">
+              <i class="fas fa-bell"></i>
+              <span class="dot"></span>
+            </a>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Spacer for navbar -->
+    <div class="navbar-spacer"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <!-- Navigation Links -->
+        <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        <a href="brand.html"><i class="fas fa-motorcycle"></i> New Bikes</a>
+        <a href="upcoming.html"><i class="fas fa-clock"></i> Upcoming Bikes</a>
+        <a href="compare.html"><i class="fas fa-balance-scale"></i> Compare Bikes</a>
+        <a href="calculator.html"><i class="fas fa-calculator"></i> Expense Calculator</a>
+        <a href="reg.html"><i class="fas fa-file-contract "></i> Registration Fees</a>
+        <a href="company.html"><i class="fas fa-layer-group"></i> All Brands</a>
+        <a href="dealer.html"><i class="fas fa-store"></i> Find Showrooms</a>
+        <a href="about.html"><i class="fas fa-users"></i> About US</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> Contact US</a>
+        <a href="advertise.html"><i class="fas fa-bullhorn"></i> Advertise</a>
+        <a href="news.html"><i class="fas fa-newspaper"></i> News & Affairs</a>
+        <a href="privacy.html"><i class="fas fa-shield-alt "></i> Privacy Policy</a>
+        <a href="terms.html"><i class="fas fa-scroll "></i> Terms & Conditions</a>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <div class="container">
+            <div class="bike-header">
+                <div class="bike-info">
+                    <h1>Yamaha R15 V4</h1>
+                    <div class="bike-price">৳4,69,000</div>
+                    <div class="bike-description">
+                        The Yamaha R15 V4 is a sporty motorcycle that combines aggressive styling with advanced technology. 
+                        Featuring a liquid-cooled engine, VVA technology, and race-inspired design, this bike delivers 
+                        exceptional performance for both city riding and track days.
+                    </div>
+                </div>
+                <div class="bike-image">
+                    <img src="https://res.cloudinary.com/duna87jkw/image/upload/v1752935879/bikes/yahama/r15/yahama-r15-showroom-view.webp" alt="Yamaha R15 V4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Specifications -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-gear"></i> Key Specifications</h2>
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Specification</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bike</td>
+                        <td>Yamaha R15 V4</td>
+                    </tr>
+                    <tr>
+                        <td>Brand</td>
+                        <td>Yamaha</td>
+                    </tr>
+                    <tr>
+                        <td>CC</td>
+                        <td>155cc</td>
+                    </tr>
+                    <tr>
+                        <td>Engine Cooling</td>
+                        <td>Liquid Cooled</td>
+                    </tr>
+                    <tr>
+                        <td>Mileage (Claimed)</td>
+                        <td>40 km/l</td>
+                    </tr>
+                    <tr>
+                        <td>Mileage (Reported)</td>
+                        <td>35-38 km/l</td>
+                    </tr>
+                    <tr>
+                        <td>Top Speed (Claimed)</td>
+                        <td>136 km/h</td>
+                    </tr>
+                    <tr>
+                        <td>Top Speed (Reported)</td>
+                        <td>130-134 km/h</td>
+                    </tr>
+                    <tr>
+                        <td>Braking</td>
+                        <td>Dual Channel ABS</td>
+                    </tr>
+                    <tr>
+                        <td>Gear</td>
+                        <td>6-Speed Manual</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>142 kg</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Detailed Specifications -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-wrench"></i> Detailed Specifications</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <h3>Performance</h3>
+                    <ul class="detail-list">
+                        <li><span>Max Power</span><span>18.4 PS @ 10,000 rpm</span></li>
+                        <li><span>Max Torque</span><span>14.2 Nm @ 7,500 rpm</span></li>
+                        <li><span>Clutch</span><span>Wet Multi-plate</span></li>
+                        <li><span>Cooling</span><span>Liquid Cooled</span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Speed</h3>
+                    <ul class="detail-list">
+                        <li><span>Top Speed (Claimed)</span><span>136 km/h</span></li>
+                        <li><span>Top Speed (Reported)</span><span>130-134 km/h</span></li>
+                        <li><span>0-60 km/h</span><span>4.8 seconds</span></li>
+                        <li><span>0-100 km/h</span><span>12.8 seconds</span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Braking System</h3>
+                    <ul class="detail-list">
+                        <li><span>Front Brake</span><span>282mm Disc</span></li>
+                        <li><span>Rear Brake</span><span>220mm Disc</span></li>
+                        <li><span>Front Caliper</span><span>2-Piston</span></li>
+                        <li><span>ABS</span><span>Dual Channel</span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Tyres</h3>
+                    <ul class="detail-list">
+                        <li><span>Front Tyre</span><span>100/80-17</span></li>
+                        <li><span>Rear Tyre</span><span>140/70-17</span></li>
+                        <li><span>Tyre Type</span><span>Tubeless</span></li>
+                        <li><span>Wheel Type</span><span>Alloy</span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Mileage</h3>
+                    <ul class="detail-list">
+                        <li><span>Reserve Fuel</span><span>2.4 L</span></li>
+                        <li><span>Fuel Tank</span><span>11 L</span></li>
+                        <li><span>Mileage (Claimed)</span><span>40 km/l</span></li>
+                        <li><span>Mileage (Reported)</span><span>35-38 km/l</span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Lights</h3>
+                    <ul class="detail-list">
+                        <li><span>Headlight</span><span>LED</span></li>
+                        <li><span>Tail Light</span><span>LED</span></li>
+                        <li><span>Projector</span><span>Yes</span></li>
+                        <li><span>DRL</span><span>LED DRL</span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Features</h3>
+                    <ul class="detail-list">
+                        <li><span>Quickshifter</span><span>Optional</span></li>
+                        <li><span>Traction Control</span><span>Yes</span></li>
+                        <li><span>Bluetooth</span><span>Via Y-Connect</span></li>
+                        <li><span>Display</span><span>LCD Digital</span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Dimensions</h3> 
+                    <ul class="detail-list">
+                        <li><span>Seat Height</span><span>815 mm</span></li>
+                        <li><span>Ground Clearance</span><span>155 mm</span></li>
+                        <li><span>Length</span><span>1,990 mm</span></li>
+                        <li><span>Width</span><span>725 mm</span></li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Reliability</h3>
+                    <ul class="detail-list">
+                        <li><span>Build Quality</span><span>Excellent</span></li>
+                        <li><span>Parts Availability</span><span>Good</span></li>
+                        <li><span>Service Network</span><span>Wide</span></li>
+                        <li><span>Warranty</span><span>2 Years</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pros and Cons -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> Pros & Cons</h2>
+            <div class="pros-cons">
+                <div class="pros">
+                    <h3><i class="fas fa-check"></i> Pros</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Aggressive and sporty design</li>
+                        <li><i class="fas fa-check"></i> Liquid-cooled engine with VVA</li>
+                        <li><i class="fas fa-check"></i> Dual-channel ABS as standard</li>
+                        <li><i class="fas fa-check"></i> LED headlight and DRL</li>
+                        <li><i class="fas fa-check"></i> Good build quality and reliability</li>
+                    </ul>
+                </div>
+                <div class="cons">
+                    <h3><i class="fas fa-times"></i> Cons</h3>
+                    <ul>
+                        <li><i class="fas fa-times"></i> High seat height for short riders</li>
+                        <li><i class="fas fa-times"></i> Aggressive riding position</li>
+                        <li><i class="fas fa-times"></i> Limited storage space</li>
+                        <li><i class="fas fa-times"></i> Higher maintenance cost</li>
+                        <li><i class="fas fa-times"></i> Not ideal for long touring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What is the on-road price of Yamaha R15 V4?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    The on-road price of Yamaha R15 V4 varies by location, but typically ranges from ৳4,85,000 to ৳5,10,000 including registration, insurance, and other charges.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What is the real-world mileage of R15 V4?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    The real-world mileage of Yamaha R15 V4 ranges between 35-38 km/l depending on riding conditions, maintenance, and riding style. City riding typically gives lower mileage than highway riding.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>Is R15 V4 suitable for beginners?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    While the R15 V4 is manageable for beginners, its sporty ergonomics and performance-oriented nature make it more suitable for riders with some experience. New riders should consider practicing with smaller displacement bikes first.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>What are the service intervals for R15 V4?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Yamaha recommends service intervals of 6,000 km or 6 months, whichever comes first. Regular maintenance is crucial for optimal performance and longevity of the bike.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suggestions Section -->
+    <section class="section">
+        <div class="container">
+        <h2 class="section-title"><i class="fas fa-motorcycle"></i> Similar Bikes You May Like</h2>
+        <div class="suggestion-grid">
+            <div class="suggestion-card">
+              <div class="brand-logo-row">
+                <img class="brand-logo" src="images/Brands/suzuki.png" alt="Suzuki Logo">
+              </div>
+              <img class="bike-main-img" src="images/r15.png" alt="Suzuki GSX-R150">
+              <div class="suggestion-info">
+                <div class="suggestion-name">Suzuki GSX-R150</div>
+                <div class="suggestion-price">৳4,50,000</div>
+                <a href="suzuki-gsxr.html" class="suggestion-btn">View Detail</a>
+              </div>
+            </div>
+            <div class="suggestion-card">
+              <div class="brand-logo-row">
+                <img class="brand-logo" src="images/Brands/RE.png" alt="Royal Enfield Logo">
+              </div>
+              <img class="bike-main-img" src="images/r15.png" alt="Royal Enfield Hunter 350">
+              <div class="suggestion-info">
+                <div class="suggestion-name">Royal Enfield Hunter 350</div>
+                <div class="suggestion-price">৳3,90,000</div>
+                <a href="hunter-350.html" class="suggestion-btn">View Detail</a>
+              </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+        </div>
+    </section>    
+
+    <!-- Enhanced User Review Section -->
+        <div class="rating-box">
+        <div class="rating-header">
+            <h1><i class="fas fa-star"></i> User Reviews</h1>
+            <div class="average-score" id="average-score">4.3 ★</div>
+            <div class="review-count">234 Reviews</div>
+        </div>
+
+        <div id="categories"></div>
+
+        <button class="submit-button">Submit Review</button>
+        </div>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo-row">
+            <img src="images/logo/cropped-image (1).png" alt="Logo" loading="lazy" />
+            <h3>Mr Bike <span class="bd-small">BD</span></h3>
+          </div>
+          <p>Discover the best motorcycles in Bangladesh with Mr. Bike <span class="bd-small">BD</span> – your trusted source for expert reviews, latest prices, dealer info, and everything you need to choose the perfect ride.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61577599345312" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/Mr_Bike09" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/mrbikebd9/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@mrbike-c5q?si=Zj9piaMGNyelryl4" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="http://www.linkedin.com/in/mr-bike-2a1455374" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="brand.html">All Bikes</a></li>
+            <li><a href="brand.html">New Bikes</a></li>
+            <li><a href="compare.html">Compare Bikes</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="advertise.html">Advertise</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <h3>Mr Bike <span class=Mr Bike><span class="bd-small">BD</span></span></h3><p>All rights reserved.</p>
+        <p>&copy;2025 | A project of <a href="http://unleft.space/" target="_blank">UNLEFT</a></p>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/bike.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
