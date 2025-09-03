@@ -7,7 +7,7 @@
     const style = document.createElement('style');
     style.textContent = `
         :root {
-            --secondary-color: #f1faee;
+            --secondary-color: #316896;
             --accent-color: #a8dadc;
             --dark-color: #1d3557;
             --light-color: #f8f9fa;
