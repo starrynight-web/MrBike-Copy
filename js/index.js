@@ -112,3 +112,29 @@
       }
     }
     
+
+    const modal = document.getElementById('bikeUserLoginModal');
+const leftPanel = document.getElementById('modalLeft');
+
+const images = [
+  "https://cdn.kawasaki.com.my/img/product/card/1727923715.PRL2y.jpg",
+  "https://cdn.kawasaki.com.my/img/product/card/1731317663.Ojm1v.jpg",
+  "https://www.tourenfahrer.de/fileadmin/user_upload/kawasaki_ninja-7-hybrid_01.jpg",
+  "https://images-stag.jazelc.com/uploads/theautopian-m2en/110822-Kawasaki-Ninja-HEV-23MY_-_0369_-STU1-scaled.jpg",
+  "https://bd.gaadicdn.com/processedimages/tvs/apache-rtr-310/source/apache-rtr-31064f95e454d666.jpg"
+];
+
+let current = 0;
+function changeBackground() {
+  leftPanel.style.backgroundImage = `url(${images[current]})`;
+  current = (current + 1) % images.length;
+}
+setInterval(changeBackground, 2500);
+
+function openBikeLogin() {
+  modal.classList.add("active");
+  changeBackground();
+}
+function closeBikeLogin() {
+  modal.classList.remove("active");
+}
