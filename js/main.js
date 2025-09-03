@@ -394,10 +394,3 @@ class DynamicSearch {
 document.addEventListener('DOMContentLoaded', () => {
   new DynamicSearch();
 });    
-
- function openBikeLogin() {
-      document.getElementById("bikeUserLoginModal").classList.add("active");
-    }
-    function closeBikeLogin() {
-      document.getElementById("bikeUserLoginModal").classList.remove("active");
-    }
