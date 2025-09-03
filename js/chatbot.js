@@ -417,10 +417,12 @@
         chatPopup.classList.toggle('active');
         // Removed: userInput.focus() → Don't auto-focus
     });
-
-    closeBtn.addEventListener('click', () => {
-        chatPopup.classList.remove('active');
-    });
+    // Close on X button
+    if (closeBtn){
+        closeBtn.addEventListener('click', () => {
+            chatPopup.classList.remove('active');
+        });
+    }
 
     // Close on outside click
     window.addEventListener('click', (e) => {
