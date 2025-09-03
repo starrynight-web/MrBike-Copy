@@ -6,7 +6,7 @@
   <title>Bike Info Login Popup</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
+    .bike-user-login-btn-body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #111;
@@ -18,7 +18,7 @@
     }
 
     /* Login button */
-    .login-btn a {
+    .bike-user-login-btn a {
       display: inline-block;
       padding: 12px 20px;
       background: #000;
@@ -29,12 +29,12 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.4);
       transition: 0.3s;
     }
-    .login-btn a:hover {
+    .bike-user-login-btn a:hover {
       background: #444;
     }
 
     /* Fullscreen modal */
-    .modal {
+    .bike-user-login-modal {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
@@ -45,18 +45,18 @@
       z-index: 9999;
     }
 
-    .modal.active {
+    .bike-user-login-modal.active {
       display: flex;
-      animation: fadeIn 0.5s ease-in-out;
+      animation: bikeFadeIn 0.5s ease-in-out;
     }
 
-    @keyframes fadeIn {
+    @keyframes bikeFadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
 
     /* Login box */
-    .login-box {
+    .bike-user-login-box {
       background: rgba(0,0,0,0.75);
       padding: 2rem;
       border-radius: 15px;
@@ -64,12 +64,12 @@
       text-align: center;
       box-shadow: 0 10px 25px rgba(0,0,0,0.6);
     }
-    .login-box h2 {
+    .bike-user-login-box h2 {
       margin-bottom: 20px;
       font-size: 1.8rem;
       color: #fff;
     }
-    .login-box input {
+    .bike-user-login-box input {
       width: 100%;
       padding: 12px;
       margin: 10px 0;
@@ -78,7 +78,7 @@
       outline: none;
       font-size: 1rem;
     }
-    .login-box button {
+    .bike-user-login-box button {
       width: 100%;
       padding: 12px;
       border: none;
@@ -90,12 +90,12 @@
       cursor: pointer;
       transition: 0.3s;
     }
-    .login-box button:hover {
+    .bike-user-login-box button:hover {
       background: #ff3333;
     }
 
     /* Close button */
-    .close-btn {
+    .bike-user-login-close {
       position: absolute;
       top: 20px;
       right: 30px;
@@ -104,24 +104,24 @@
       cursor: pointer;
       transition: 0.3s;
     }
-    .close-btn:hover {
+    .bike-user-login-close:hover {
       color: red;
     }
   </style>
 </head>
 <body>
-
+<div class="bike-user-login-btn-body">
   <!-- Login Button -->
-  <div class="login-btn">
-    <a href="javascript:void(0)" onclick="openModal()">
+  <div class="bike-user-login-btn">
+    <a href="javascript:void(0)" onclick="openBikeLogin()">
       <i class="fas fa-sign-in-alt"></i> Login
     </a>
   </div>
 
   <!-- Fullscreen Login Modal -->
-  <div class="modal" id="loginModal">
-    <span class="close-btn" onclick="closeModal()">&times;</span>
-    <div class="login-box">
+  <div class="bike-user-login-modal" id="bikeUserLoginModal">
+    <span class="bike-user-login-close" onclick="closeBikeLogin()">&times;</span>
+    <div class="bike-user-login-box">
       <h2>🏍️ Bike Info Login</h2>
       <form>
         <input type="email" placeholder="Email" required>
@@ -131,14 +131,7 @@
     </div>
   </div>
 
-  <script>
-    function openModal() {
-      document.getElementById("loginModal").classList.add("active");
-    }
-    function closeModal() {
-      document.getElementById("loginModal").classList.remove("active");
-    }
-  </script>
 
+</div>
 </body>
 </html>
