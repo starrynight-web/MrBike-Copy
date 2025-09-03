@@ -43,6 +43,8 @@
           </div>
         </div>
       </div>
+
+      
       <div class="notification">
         <a href="news.html" style="display: inline-block;">
           <i class="fas fa-bell"></i>
@@ -52,20 +54,17 @@
 
 
 
-      
-       <!-- Login Button -->
 <div class="notification">
-  <a href="javascript:void(0)" onclick="openBikeLogin()">
+  <a class="notifcation" onclick="openLogin()">
     <i class="fa fa-user"></i>
   </a>
 </div>
 
-<!-- Fullscreen Login Modal -->
-<div class="bike-user-login-modal" id="bikeUserLoginModal">
-  <span class="bike-user-login-close" onclick="closeBikeLogin()">&times;</span>
-  <div class="modal-left" id="modalLeft"></div>
-  <div class="modal-right">
-    <h2>Sign up Or Login</h2>
+<!-- Login panel -->
+<div class="login-panel" id="loginPanel">    <span class="close-btn" onclick="closeLogin()">&times;</span>
+
+  <div class="login-box">
+    <h2>Sign in/Sign Up</h2>
     <button class="social-btn google-btn">
       <i class="fab fa-google"></i> Login with Google
     </button>
@@ -74,9 +73,6 @@
     </button>
   </div>
 </div>
-        
-
-
 
     </div>
   </nav>
