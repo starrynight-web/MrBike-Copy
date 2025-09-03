@@ -643,17 +643,19 @@
   /* Login panel (40% width) */
   .login-panel {
     position:fixed;
-    top:0;
+    top:8.7%;
+    bottom:  10.3cqh;
     right:-30%;   /* hidden outside screen */
     width:30%;
-    height:100vh;
-    background:var(--secondary-color);
+    height: 80%;
+    background:rgba(0, 140, 255, 0.783);
     color:#ffffff;
     display:flex;
     justify-content:center;
     align-items:center;
     transition: right 0.8s ease; /* slide effect */
-    z-index:9999;
+    z-index:9999; 
+    border-radius:20px;
   }
   .login-panel.active {
     right:0; /* slide in */
@@ -661,7 +663,7 @@
 
   /* Login box */
   .login-box {
-    background:rgba(32, 32, 185, 0.85);
+    background:rgb(0, 112, 173);
     padding:2rem;
     border-radius:20px;
     box-shadow:0 12px 30px rgba(0,0,0,0.6);
@@ -690,9 +692,9 @@
     font-size:1rem;
     box-shadow:0 6px 20px rgba(0,0,0,0.5);
   }
-  .google-btn { background:linear-gradient(135deg,#db4437,#e74c3c); }
+  .google-btn { background:linear-gradient(135deg,#ff1500,#ff1900); }
   .google-btn:hover { transform:translateY(-3px); }
-  .facebook-btn { background:linear-gradient(135deg,#4267B2,#5580d3); }
+  .facebook-btn { background:linear-gradient(135deg,#0055ff,#0055ff); }
   .facebook-btn:hover { transform:translateY(-3px); }
 
   /* Close button */
