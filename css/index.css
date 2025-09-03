@@ -648,7 +648,7 @@
     right:-30%;   /* hidden outside screen */
     width:30%;
     height: 80%;
-    background:rgb(255, 255, 255);
+    background:linear-gradient(135deg,#3487dc,#295f92);
     color:#ffffff;
     display:flex;
     justify-content:center;
@@ -703,7 +703,7 @@
     top:10px;
     right:15px;
     font-size:2.5rem;
-    color:#fff;
+    color:#ffffff;
     cursor:pointer;
     transition:0.3s;
   }
