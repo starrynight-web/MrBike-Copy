@@ -368,7 +368,7 @@
             </div>
 
             <div class="chat-input-area">
-                <input type="text" id="userInput" placeholder="Ask about bikes..." />
+                <input type="text" id="userInput" placeholder="Ask about bikes..." autocapitalize="sentences" autocomplete="off" spellcheck="true"/>
                 <button id="sendButton">Send</button>
             </div>
         </div>
@@ -415,9 +415,7 @@
     // Toggle Chat
     chatButton.addEventListener('click', () => {
         chatPopup.classList.toggle('active');
-        if (chatPopup.classList.contains('active')) {
-            userInput.focus();
-        }
+        // Removed: userInput.focus() → Don't auto-focus
     });
 
     closeBtn.addEventListener('click', () => {
@@ -438,6 +436,7 @@
 
         addMessageToChat(message, 'user');
         userInput.value = '';
+        userInput.focus(); // ✅ OK here: user just sent a message, expects to reply
         showTypingIndicator();
 
         try {
