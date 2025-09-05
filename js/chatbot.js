@@ -105,7 +105,7 @@
             align-items: center;
         }
 
-        .chat-header .close-btn {
+        .chat-header .closeBtn {
             background: transparent;
             color: white;
             border: none;
@@ -352,7 +352,7 @@
         <div class="chat-popup" id="chatPopup">
             <div class="chat-header">
                 <h3>Mr Bikoo</h3>
-                <button class="close-btn">&times;</button>
+                <button class="closeBtn">&times;</button>
             </div>
 
             <div class="language-selector">
@@ -380,7 +380,7 @@
 
     const chatButton = document.getElementById('chatButton');
     const chatPopup = document.getElementById('chatPopup');
-    const closeBtn = document.querySelector('.close-btn');
+    const closeBtn = document.querySelector('.closeBtn');
     const chatContainer = document.getElementById('chatContainer');
     const userInput = document.getElementById('userInput');
     const sendButton = document.getElementById('sendButton');
@@ -417,12 +417,11 @@
         chatPopup.classList.toggle('active');
         // Removed: userInput.focus() → Don't auto-focus
     });
-    // Close on X button
-    if (closeBtn){
-        closeBtn.addEventListener('click', () => {
-            chatPopup.classList.remove('active');
-        });
-    }
+
+    // Close button functionality
+    closeBtn.addEventListener('click', () => {
+        chatPopup.classList.remove('active');
+    });
 
     // Close on outside click
     window.addEventListener('click', (e) => {
