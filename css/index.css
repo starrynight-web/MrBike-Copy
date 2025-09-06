@@ -648,7 +648,7 @@
     right:-30%;   /* hidden outside screen */
     width:30%;
     height: 80%;
-    background:linear-gradient(135deg,#3487dc,#295f92);
+    background:linear-gradient(135deg,#7970ff,#e1e1e1,#f97272);
     color:#ffffff;
     display:flex;
     justify-content:center;
@@ -663,7 +663,7 @@
 
   /* Login box */
   .login-box {
-    background:rgba(0, 166, 255, 0.824);
+    background:rgba(0, 0, 0, 0.824);
     padding:2rem;
     border-radius:20px;
     box-shadow:0 12px 30px rgba(0,0,0,0.6);

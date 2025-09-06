@@ -271,6 +271,7 @@
     }
 
 /* Dynamic Search Styles */
+/* Default: Desktop view */
 .search-container {
   position: relative;
   display: inline-block;
@@ -299,6 +300,22 @@
   width: 200px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* -------- Mobile View -------- */
+@media (max-width: 768px) {
+  .search-bar {
+    display: none; /* input hide */
+  }
+  .search-icon {
+    position: relative; /* abar normal icon show */
+    left: 0;
+    font-size: 22px;
+    color: #fff;      
+    pointer-events: auto; /* mobile e clickable korar jonno */
+    cursor: pointer;
+  }
+}
+
 
 .search-bar:focus {
   border-color: var(--primary-color);
