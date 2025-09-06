@@ -111,7 +111,7 @@
         });
       }
     }
-    
+  
 function openLogin(){
   document.getElementById("loginPanel").classList.add("active");
 }
