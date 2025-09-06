@@ -24,6 +24,9 @@
       color: var(--text-dark);
       line-height: 1.6;
       overflow-x: hidden;
+      margin: 0;
+      
+
     }
 
     /* Animated Background */
@@ -67,15 +70,16 @@
     }
     /* Hero Section */
     .hero {
-      height: 70vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-      background: linear-gradient(hsla(0, 0%, 100%, 0.8), #ffffffe6), url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80');
+      background: linear-gradient(hsla(0, 0%, 100%, 0), #ffffff00), url('https://images.unsplash.com/photo-1656766500535-3b2ff1f15082?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
+      padding-top: 80px;
     }
 
     .hero-content {
@@ -112,22 +116,37 @@
         align-items: center;
         justify-content: center;
     }
-    .hero h1 {
-      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, var(--text-dark), var(--primary-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.25;
-      padding-bottom: 0.2em;
-    }
+  .hero h1 {
+  font-size: clamp(2.8rem, 3.5vw, 2.5rem);
 
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      color: var(--text-gray);
-    }
+  /* Pure white text */
+  color: #ffffff;
+
+  /* Optional gradient look */
+  /* background: linear-gradient(90deg, #ffffff, #e0e0e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
+  /* Shadow দিয়ে clear দেখাবে */
+  text-shadow: 
+    3px 3px 6px rgba(0, 0, 0, 0.849),   /* নিচে dark shadow */
+    -3px -3px 6px rgba(0, 0, 0, 0.936); /* উপরে shadow */
+  
+  padding-bottom: 0.2em;
+}
+
+
+.hero p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff; /* Pure white text */
+
+  /* Shadow add করা হলো যাতে white background এও clear দেখা যায় */
+  text-shadow: 
+    1px 1px 4px rgba(0, 0, 0, 0.7),
+    -1px -1px 4px rgba(0, 0, 0, 0.5);
+}
+
 
     .cta-buttons {
       display: flex;
@@ -151,15 +170,14 @@
     }
 
     .btn-primary {
-      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-      color: white;
-      box-shadow: 0 10px 30px #9ee9e5;
+      background: linear-gradient(45deg, rgb(255, 255, 255), rgb(255, 255, 255));
+      color: rgb(0, 94, 255);
     }
 
     .btn-secondary {
       background: transparent;
-      color: var(--primary-color);
-      border: 2px solid var(--primary-color);
+      color: white;
+      border: 5px solid rgb(255, 255, 255);
     }
 
     .btn:hover {
