@@ -112,3 +112,9 @@
       }
     }
     
+function openLogin(){
+  document.getElementById("loginPanel").classList.add("active");
+}
+function closeLogin(){
+  document.getElementById("loginPanel").classList.remove("active");
+}
