@@ -39,7 +39,7 @@
       width: 100%;
       top: 0;
       z-index: 1000;
-      height: 50px; /* Or whatever your desired navbar height is */
+      height: 70px; /* Or whatever your desired navbar height is */
       overflow: visible; /* Allow logo to extend a bit outside */
     }
  
