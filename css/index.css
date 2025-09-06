@@ -2,7 +2,7 @@
       --primary-color: #295f92;
       --secondary-color: #316896;
       --light-bg: #ffffff;
-      --lighter-bg: #f8f9fa;
+      --lighter-bg: #e7f8c3;
       --card-bg: #ffffff;
       --text-dark: #333333;
       --text-gray: #666666;
@@ -83,11 +83,11 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      background: linear-gradient(hsla(0, 0%, 100%, 0), #ffffff00), url('https://images.unsplash.com/photo-1656766500535-3b2ff1f15082?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+      background: linear-gradient(hsla(0, 0%, 100%, 0), #00000057), url('https://images.unsplash.com/photo-1656766500535-3b2ff1f15082?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
-      padding-top: 70px;
+      padding-top: 10px;
     }
 
     .hero-content {
@@ -316,8 +316,8 @@
 /* Desktop: একসাথে max 3টা কার্ড */
 @media (min-width: 1024px) {
   .bike-card {
-    flex: 0 0 calc(25.5% - 1rem);
-    max-width: calc(25.5% - 1rem);
+    flex: 0 0 calc(25.3% - 1rem);
+    max-width: calc(25.34% - 1rem);
   }
 }
 
