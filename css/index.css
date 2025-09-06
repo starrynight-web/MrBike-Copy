@@ -612,7 +612,6 @@
     right:-30%;   /* hidden outside screen */
     width:30%;
     height: 80%;
-    background:linear-gradient(135deg,#7970ff,#e1e1e1,#f97272);
     color:#ffffff;
     display:flex;
     justify-content:center;
