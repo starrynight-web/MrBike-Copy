@@ -1,156 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern Login</title>
-<style>
-  /* ================= Theme CSS (simplified) ================= */
-  :root {
-    --primary-color: #295f92;
-    --secondary-color: #316896;
-    --light-bg: #ffffff;
-    --lighter-bg: #f8f9fa;
-    --card-bg: #ffffff;
-    --text-dark: #333333;
-    --text-gray: #666666;
-    --accent-glow: #9ee9e5;
-    --border-radius: 15px;
-    --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --border-color: #e0e0e0;
-  }
-  body {
-    font-family: sans-serif;
-    background: linear-gradient(135deg, var(--lighter-bg), var(--light-bg));
-    margin: 0; padding: 0;
-  }
-
-  /* ================= Login Panel ================= */
-  .login-panel {
-    position: fixed;
-    top: 10%;
-    bottom: 10%;
-    right: -35%;
-    width: 30%;
-    background: linear-gradient(135deg,#7970ff,#e1e1e1,#f97272);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.8s ease;
-    border-radius: 20px;
-    z-index: 9999;
-  }
-  .login-panel.active { right: 5%; }
-
-  .login-box {
-    background: rgba(0,0,0,0.824);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
-    max-width: 400px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-  }
-  .login-box h2 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-  }
-
-  /* Social Buttons */
-  .social-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-    padding: 14px;
-    margin: 12px 0;
-    border: none;
-    border-radius: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.4s;
-    color: #ffffff;
-    font-size: 1rem;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
-  }
-  .google-btn { background: linear-gradient(135deg,#ff1500,#ff1900); }
-  .google-btn:hover { transform: translateY(-3px); }
-  .facebook-btn { background: linear-gradient(135deg,#0055ff,#0055ff); }
-  .facebook-btn:hover { transform: translateY(-3px); }
-
-  /* Close Button */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 2.5rem;
-    color: #ffffff;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .close-btn:hover { color: red; }
-
-  /* Trigger Button */
-  .login-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 14px 28px;
-    font-size: 1rem;
-    font-weight: bold;
-    background: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    transition: 0.3s;
-    z-index: 999;
-  }
-  .login-btn:hover { transform: translateY(-3px); }
-
-  /* Responsive */
-  @media(max-width:900px){
-    .login-panel { width:70%; right:-70%; }
-  }
-  @media(max-width:500px){
-    .login-panel { width:100%; right:-100%; border-radius:0; }
-  }
-</style>
-</head>
-<body>
-
-<button class="login-btn" onclick="toggleLogin()">Login</button>
-
-<div class="login-panel" id="loginPanel">
-  <div class="login-box">
-    <span class="close-btn" onclick="toggleLogin()">×</span>
-    <h2>Sign In</h2>
-    <button class="social-btn google-btn" onclick="loginGoogle()">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="20" alt="Google">
-      Continue with Google
-    </button>
-    <button class="social-btn facebook-btn" onclick="loginFacebook()">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" width="20" alt="Facebook">
-      Continue with Facebook
-    </button>
-  </div>
+<h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<input type="text" placeholder="Name" />
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<button>Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" />
+			<input type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button>Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
 </div>
 
-<script>
-  function toggleLogin() {
-    document.getElementById('loginPanel').classList.toggle('active');
-  }
-  function loginGoogle() {
-    alert('Google login clicked');
-  }
-  function loginFacebook() {
-    alert('Facebook login clicked');
-  }
-</script>
-
-</body>
-</html>
+<footer>
+	<p>
+		Created with <i class="fa fa-heart"></i> by
+		<a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+		- Read how I created this and how you can join the challenge
+		<a target="_blank" href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/">here</a>.
+	</p>
+</footer>
