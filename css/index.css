@@ -238,14 +238,17 @@
       left: 100%;
     }
 
-    .btn-more-details {
-      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+     .btn-more-details {
+      background: var(--primary-color);
       color: white;
       box-shadow: 0 10px 30px #9ee9e5;
       margin-top: 1.5rem;
       font-size: small;
+      display: flex;       
       text-align: center;
-    }
+      justify-content: center; 
+      align-items: center;
+}
     .btn-more-details:hover {
       background: #256bb2;
       color: #fff;
@@ -316,7 +319,7 @@
   transition: var(--transition);
   scroll-snap-align: center;
   position: relative;
-  border: 2px solid var(--border-color);
+  border: 3px solid var(--border-color);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   padding: 1.2rem;
   box-sizing: border-box;
@@ -343,8 +346,8 @@
 /* Desktop: একসাথে max 3টা কার্ড */
 @media (min-width: 1024px) {
   .bike-card {
-    flex: 0 0 calc(25.3% - 1rem);
-    max-width: calc(25.34% - 1rem);
+    flex: 0 0 calc(27% - 1rem);
+    max-width: calc(25.3568% - 1rem);
   }
 }
 
