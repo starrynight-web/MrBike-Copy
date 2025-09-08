@@ -12,264 +12,262 @@
   --border-color: #e0e0e000;
 }
 
-
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      line-height: 1.7;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.7;
+}
 
-    body {
-      font-family: sans-serif;
-    }
+body {
+  font-family: sans-serif;
+}
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 
-      background-color: #212d2e;
+  background-color: #212d2e;
 
-      background-color: #121622;
+  background-color: #121622;
 
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-      height: 70px; /* Or whatever your desired navbar height is */
-      overflow: visible; /* Allow logo to extend a bit outside */
-    }
- 
-    .navbar-spacer {
-        height: 50px;
-      }        
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 70px; /* Or whatever your desired navbar height is */
+  overflow: visible; /* Allow logo to extend a bit outside */
+}
 
-    .left-section {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.navbar-spacer {
+  height: 70px;
+}
 
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      cursor: pointer;
-      padding-right: 10px;
-    }
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    .hamburger span {
-      width: 25px;
-      height: 3px;
-      background-color: #ffffff;
-      border-radius: 2px;
-    }
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+  padding-right: 10px;
+}
 
-    .logo img {
-      max-height: 40px;       /* Increase this value */
-      transform: scale(1.2);  /* Optional: visually scale the image */
-      margin-top: 5px;       /* Adjust position if needed */
-      padding-left: 15px;
-    }
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
 
+.logo img {
+  max-height: 40px; /* Increase this value */
+  transform: scale(1.2); /* Optional: visually scale the image */
+  margin-top: 5px; /* Adjust position if needed */
+  padding-left: 15px;
+}
 
-    .right-section {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-    .search-bar {
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      outline: none;
-    }
+.search-bar {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
 
-    .notification {
-      position: relative;
-    }
+.notification {
+  position: relative;
+}
 
-    .notification i {
-      font-size: 18px;
-      color: #ffffff;
-      cursor: pointer;
-    }
+.notification i {
+  font-size: 18px;
+  color: #ffffff;
+  cursor: pointer;
+}
 
-    .notification .dot {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 8px;
-      height: 8px;
-      background-color: red;
-      border-radius: 50%;
-      border: 2px solid white; /* adds separation from bell icon */
-    } 
+.notification .dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid white; /* adds separation from bell icon */
+}
 
-    /* Sidebar Menu */
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: -250px;
-      width: 250px;
-      height: 100%;
-      background: #fff;
-      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-      transition: left 0.3s ease;
-      z-index: 999;
-      padding-top: 60px;
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-    }
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  z-index: 999;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
 
-    .sidebar.active {
-      left: 0;
-    }
+.sidebar.active {
+  left: 0;
+}
 
-    .sidebar a {
-      padding: 15px 20px;
-      text-decoration: none;
-      color: #333;
-      border-bottom: 1px solid #eee;
-      transition: background 0.2s;
-    }
+.sidebar a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s;
+}
 
-    .sidebar a:hover {
-      background-color: #9af8ff;
-    }
+.sidebar a:hover {
+  background-color: #9af8ff;
+}
 @media (max-width: 768px) {
-      .sidebar.active ~ .content {
-        margin-left: 0;
-      }
-    }
-    /* Footer */
-    footer {
-        background: var(--lighter-bg);
-        padding: 3rem 0 1rem;
-        border-top: 1px solid var(--border-color);
-      }
-  
-      .footer-logo-row {
-        display: flex;
-        align-items: center;
-        gap: 12px; /* Adjust spacing as needed */
-      }
-      
-      .footer-logo-row img {
-        max-height: 45px;      /* Reduced from 60px */
-        transform: scale(1);   /* No extra scaling */
-        margin-top: 0;
-        padding-left: 0;
-      }
-      
-      .footer-logo-row h3 {
-        margin: 0;
-        color: var(--primary-color);
-        font-size: 1.5rem;
-        padding-top: 15px;
-        margin-left: -9px;
-        font-weight: bold;
-        letter-spacing: 1px;
-      }
-  
-      .footer-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 2rem;
-      }
-  
-      .footer-content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-bottom: 2rem;
-      }
-  
-      /* Lower the Quick Links and Support columns in the footer */
-      .footer-content .footer-section:not(:first-child) {
-        margin-top: 1.3rem; /* Adjust this value as needed */
-        /* margin-left: 8rem; */
-      }
-  
-      .footer-section h3 {
-        color: var(--primary-color);
-        margin-bottom: 1rem;
-      }
-  
-      .footer-section ul {
-        list-style: none;
-      }
-  
-      .footer-section a {
-        color: var(--text-gray);
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-  
-      .footer-section a:hover {
-        color: var(--primary-color);
-      }
-  
-      .footer-section p {
-        color: var(--text-gray);
-      }
-  
-      .social-links {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-  
-      .social-links a {
-        width: 40px;
-        height: 40px;
-        background: var(--card-bg);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: var(--transition);
-        border: 1px solid var(--border-color);
-      }
-  
-      .social-links a:hover {
-        background: var(--primary-color);
-        transform: translateY(-3px);
-        color: white;
-      }
-  
-      .footer-bottom {
-        text-align: center;
-        padding-top: 2rem;
-        border-top: 1px solid var(--border-color);
-        color: var(--text-gray);
-      }
-  
-      .footer-bottom a {
-        text-decoration: none;
-        color: inherit; /* Keeps the color consistent */
-      }
-      .footer-bottom a:hover {
-        color: var(--primary-color); /* Or use any color you prefer */
-        text-decoration: none;       /* Keeps underline off on hover */
-      }    
-      .bd-small{
-        font-size: 0.5em; /* Makes BD visually smaller */
-        vertical-align: super; /* Slight lift, optional */
-        font-weight: bold; /* Keeps the BD bold if needed */
-        letter-spacing: 0.5px;
-      }
+  .sidebar.active ~ .content {
+    margin-left: 0;
+  }
+}
+/* Footer */
+footer {
+  background: var(--lighter-bg);
+  padding: 3rem 0 1rem;
+  border-top: 1px solid var(--border-color);
+}
 
-    @media (max-width: 600px) {
-      .search-bar {
-        max-width: 100px;
-      }
-    }
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Adjust spacing as needed */
+}
+
+.footer-logo-row img {
+  max-height: 45px; /* Reduced from 60px */
+  transform: scale(1); /* No extra scaling */
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.footer-logo-row h3 {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  padding-top: 15px;
+  margin-left: -9px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Lower the Quick Links and Support columns in the footer */
+.footer-content .footer-section:not(:first-child) {
+  margin-top: 1.3rem; /* Adjust this value as needed */
+  /* margin-left: 8rem; */
+}
+
+.footer-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section a {
+  color: var(--text-gray);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--primary-color);
+}
+
+.footer-section p {
+  color: var(--text-gray);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  background: var(--card-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  border: 1px solid var(--border-color);
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-gray);
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: inherit; /* Keeps the color consistent */
+}
+.footer-bottom a:hover {
+  color: var(--primary-color); /* Or use any color you prefer */
+  text-decoration: none; /* Keeps underline off on hover */
+}
+.bd-small {
+  font-size: 0.5em; /* Makes BD visually smaller */
+  vertical-align: super; /* Slight lift, optional */
+  font-weight: bold; /* Keeps the BD bold if needed */
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    max-width: 100px;
+  }
+}
 
 /* Dynamic Search Styles */
 /* Default: Desktop view */
@@ -311,12 +309,11 @@
     position: relative; /* abar normal icon show */
     left: 0;
     font-size: 22px;
-    color: #fff;      
+    color: #fff;
     pointer-events: auto; /* mobile e clickable korar jonno */
     cursor: pointer;
   }
 }
-
 
 .search-bar:focus {
   border-color: var(--primary-color);
@@ -455,7 +452,7 @@
   .search-bar {
     width: 150px;
   }
-  
+
   .search-suggestions {
     max-height: 250px;
     min-width: 280px;
@@ -603,6 +600,7 @@
 }
 
 /* Prevent horizontal scrollbars in dropdown */
-.search-suggestions, #suggestionsList {
+.search-suggestions,
+#suggestionsList {
   overflow-x: hidden;
 }
