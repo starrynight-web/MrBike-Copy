@@ -28,12 +28,8 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-
-  background-color: #212d2e;
-
-  background-color: #121622;
-
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.648);
   position: fixed;
   width: 100%;
   top: 0;
@@ -55,16 +51,16 @@ nav {
 .hamburger {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 9px;
   cursor: pointer;
   padding-right: 10px;
 }
 
 .hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #ffffff;
-  border-radius: 2px;
+  width: 40px;
+  height: 5px;
+  background-color: #000000;
+  border-radius: 10px;
 }
 
 .logo img {
@@ -80,11 +76,12 @@ nav {
   gap: 15px;
 }
 
-.search-bar {
+.search-bar {  font-size: 17px;
   padding: 6px 12px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 5.5px solid #000000;
   outline: none;
+
 }
 
 .notification {
@@ -92,9 +89,11 @@ nav {
 }
 
 .notification i {
-  font-size: 18px;
-  color: #ffffff;
+  font-size: 30px;
+  color: #000000;
   cursor: pointer;
+  border: 1px;
+  
 }
 
 .notification .dot {
@@ -111,12 +110,12 @@ nav {
 /* Sidebar Menu */
 .sidebar {
   position: fixed;
-  top: 0;
+  top: 25px;
   left: -250px;
   width: 250px;
   height: 100%;
-  background: #fff;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  background: #d8f7e6;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.669);
   transition: left 0.3s ease;
   z-index: 999;
   padding-top: 60px;
@@ -133,12 +132,12 @@ nav {
   padding: 15px 20px;
   text-decoration: none;
   color: #333;
-  border-bottom: 1px solid #eee;
+  border-bottom: 2px solid #000000;
   transition: background 0.2s;
 }
 
 .sidebar a:hover {
-  background-color: #9af8ff;
+  background-color: #ffffff;
 }
 @media (max-width: 768px) {
   .sidebar.active ~ .content {
@@ -285,8 +284,8 @@ footer {
 .search-icon {
   position: absolute;
   left: 12px;
-  color: #666;
-  font-size: 14px;
+  color: #000000b9;
+  font-size: 20px;
   z-index: 1;
   pointer-events: none;
 }
@@ -294,9 +293,9 @@ footer {
 .search-bar {
   padding: 6px 12px 6px 35px;
   border-radius: 20px;
-  border: 1px solid #ccc;
+  border: 3px solid #000000b9;
   outline: none;
-  width: 200px;
+  width: 500px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -309,7 +308,7 @@ footer {
     position: relative; /* abar normal icon show */
     left: 0;
     font-size: 22px;
-    color: #fff;
+    color: #000000;
     pointer-events: auto; /* mobile e clickable korar jonno */
     cursor: pointer;
   }
@@ -317,24 +316,26 @@ footer {
 
 .search-bar:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(47, 138, 223, 0.2);
+  box-shadow: 0 0 0 2px rgba(5, 44, 81, 0.2);
 }
 
 .search-suggestions {
   position: absolute;
   top: 100%;
   right: 0;
-  background: white;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  max-height: 300px;
+  background: rgb(168, 232, 255);
+  border: 2px solid #070101;
+  border-radius: px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.731);
+  max-height: 700px;
   overflow-y: auto;
   z-index: 1001;
   display: none;
-  margin-top: 5px;
-  min-width: 300px;
+  margin-top: -1.9px;
+  min-width:300px;
   max-width: 400px;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-suggestions.active {
@@ -344,11 +345,11 @@ footer {
 .suggestion-item {
   padding: 12px 16px;
   cursor: pointer;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 2px solid #323232;
   transition: background-color 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .suggestion-item:last-child {
