@@ -1,12 +1,12 @@
  :root {
       --primary-color: #295f92;
       --secondary-color: #316896;
-      --light-bg: #ffffff;
-      --lighter-bg: #e7f8c3;
+      --light-bg: #00ffae;
+      --lighter-bg: #1aff0037;
       --card-bg: #ffffff;
       --text-dark: #333333;
       --text-gray: #666666;
-      --accent-glow: #9ee9e5;
+      --accent-glow: #68efe8;
       --border-radius: 15px;
       --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       --border-color: #e0e0e0;
@@ -134,23 +134,35 @@
         transform: translateY(0);
       }
     }
- .scroll-arrow {
-        background: transparent;
-        color: #3487dc;
-        border: none;
-        width: 30px;
-        height: 30px;
-        font-size: 2rem;
-        font-weight: bold;
-        cursor: pointer;
-     
-        box-shadow: none;
-        transition: color 0.2s, background 0.2s;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.scroll-arrow {
+  background: transparent;
+  color: #ff0000;
+  border: none;
+  font-size: clamp(1rem, 2.5vw, 2.5rem); /* responsive font size */
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Small screens (mobile) */
+@media (max-width: 480px) {
+  .scroll-arrow {
+    font-size: 1.2rem;
+    padding: 0.4em;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .scroll-arrow {
+    font-size: 1.3rem;
+    padding: 0.45em;
+  }
+}
+
   .hero h1 {
   font-size: clamp(2.2rem, 3.5vw, 2.5rem);
 
@@ -291,12 +303,13 @@
     
     /* Navigation arrows for bike scroll sections */
     .bike-scroll-wrapper {
-  position: relative;
+  position: relaabtive;
   display: flex;
   align-items: center;
   width: 100%;
-
-  background-color: #fffefe;
+  border-radius: 15px;
+  background-color: #fdffc000;
+  margin-left: 0;
 }
 
 .bike-scroll {
@@ -305,7 +318,7 @@
   scroll-behavior: smooth;
   display: flex;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1.2rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
    
@@ -346,8 +359,8 @@
 /* Desktop: একসাথে max 3টা কার্ড */
 @media (min-width: 1024px) {
   .bike-card {
-    flex: 0 0 calc(27% - 1rem);
-    max-width: calc(25.3568% - 1rem);
+    flex: 0 0 calc(26% - 1rem);
+    max-width: calc(25.39% - 1rem);
   }
 }
 
